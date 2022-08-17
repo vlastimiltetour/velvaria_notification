@@ -6,6 +6,7 @@ import smtplib, ssl
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 from email.mime.image import MIMEImage
+from creds import *
 
 def scrape():
     url = 'https://www.velvaria.cz/#free'
@@ -39,8 +40,8 @@ def simple_pandas_scraper():
 
 def send_mail(data):
     port = 587
-    password = 'wbfdyjqbrpodzufw'
-    sender_email = 'vlkscraper@outlook.com'
+    password = creds_password
+    sender_email = creds_sender_email
     receiver_email = 'v.tetour@gmail.com'
     smtp_server = 'smtp.outlook.com'
 
